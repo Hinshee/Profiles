@@ -61,6 +61,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7.0.6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
           branch: availprofiles
           title: 'Update AvailProfiles'
           body: 'This PR updates AvailProfiles.json with the latest changes.'
