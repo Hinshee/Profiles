@@ -52,12 +52,3 @@ jobs:
           git push --force-with-lease
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v7.0.6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update-availprofiles
-          title: 'Update AvailProfiles'
-          body: 'This PR updates AvailProfiles.json with the latest changes.'
-          commit-message: 'Update AvailProfiles.json'
