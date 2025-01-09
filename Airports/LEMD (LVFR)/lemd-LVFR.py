@@ -1,5 +1,6 @@
 # -- coding: utf-8 --
 
+version = 1.0
 msfs_mode = 1
 icao = "lemd"
 
