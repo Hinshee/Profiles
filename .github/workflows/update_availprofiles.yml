@@ -57,21 +57,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check for existing pull request
-        id: check_pr
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const { data: pullRequests } = await github.pulls.list({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-              head: `${context.repo.owner}:availprofiles`
-            });
-            return pullRequests.length > 0;
-
       - name: Create Pull Request
-        if: steps.check_pr.outputs.result == 'false'
         uses: peter-evans/create-pull-request@v7.0.6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
