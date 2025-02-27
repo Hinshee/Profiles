@@ -1,0 +1,21 @@
+name: Bug Report
+title: ""
+description: File a bug report
+body:
+  - type: input
+    id: input-0
+    attributes:
+      label: Profile ICAO
+      description: Enter the Profile's ICAO
+  - type: textarea
+    id: textarea-1
+    attributes:
+      label: Problem
+      description: Describe the bug
+  - type: checkboxes
+    id: checkboxes-2
+    attributes:
+      description: Would you be willing to open a Pull Request to fix this?
+      options:
+        - Yes
+        - No
